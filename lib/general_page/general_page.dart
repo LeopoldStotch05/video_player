@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'dart:io';
+// import 'dart:io';
 
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:path_provider/path_provider.dart';
+// import 'package:flutter/services.dart';
+// import 'package:path_provider/path_provider.dart';
 
 class GeneralPage extends StatefulWidget {
   @override
@@ -36,39 +36,39 @@ class _GeneralPageState extends State<GeneralPage> {
     return _betterPlayerController;
   }
 
-  Future<BetterPlayerController> setupFileVideoData() async {
-    await _saveAssetVideoToFile();
-    await _saveAssetSubtitleToFile();
-    final directory = await getApplicationDocumentsDirectory();
+  // Future<BetterPlayerController> setupFileVideoData() async {
+  //   await _saveAssetVideoToFile();
+  //   await _saveAssetSubtitleToFile();
+  //   final directory = await getApplicationDocumentsDirectory();
+    
+  //   var dataSource = BetterPlayerDataSource(
+  //       BetterPlayerDataSourceType.FILE, "${directory.path}/testvideo.mp4",
+  //       subtitles: BetterPlayerSubtitlesSource(
+  //         type: BetterPlayerSubtitlesSourceType.FILE,
+  //         url: "${directory.path}/example_subtitles.srt",
+  //       ));
+  //   _betterPlayerController = BetterPlayerController(
+  //     BetterPlayerConfiguration(),
+  //     betterPlayerDataSource: dataSource,
+  //   );
 
-    var dataSource = BetterPlayerDataSource(
-        BetterPlayerDataSourceType.FILE, "${directory.path}/testvideo.mp4",
-        subtitles: BetterPlayerSubtitlesSource(
-          type: BetterPlayerSubtitlesSourceType.FILE,
-          url: "${directory.path}/example_subtitles.srt",
-        ));
-    _betterPlayerController = BetterPlayerController(
-      BetterPlayerConfiguration(),
-      betterPlayerDataSource: dataSource,
-    );
+  //   return _betterPlayerController;
+  // }
 
-    return _betterPlayerController;
-  }
+  // Future _saveAssetSubtitleToFile() async {
+  //   String content =
+  //       await rootBundle.loadString("assets/example_subtitles.srt");
+  //   final directory = await getApplicationDocumentsDirectory();
+  //   var file = File("${directory.path}/example_subtitles.srt");
+  //   file.writeAsString(content);
+  // }
 
-  Future _saveAssetSubtitleToFile() async {
-    String content =
-        await rootBundle.loadString("assets/example_subtitles.srt");
-    final directory = await getApplicationDocumentsDirectory();
-    var file = File("${directory.path}/example_subtitles.srt");
-    file.writeAsString(content);
-  }
-
-  Future _saveAssetVideoToFile() async {
-    String content = await rootBundle.loadString("assets/testvideo.mp4");
-    final directory = await getApplicationDocumentsDirectory();
-    var file = File("${directory.path}/textvideo.mp4");
-    file.writeAsString(content);
-  }
+  // Future _saveAssetVideoToFile() async {
+  //   String content = await rootBundle.loadString("assets/testvideo.mp4");
+  //   final directory = await getApplicationDocumentsDirectory();
+  //   var file = File("${directory.path}/textvideo.mp4");
+  //   file.writeAsString(content);
+  // }
 
   @override
   Widget build(BuildContext context) {
