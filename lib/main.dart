@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:video_player_test/vlc_widget.dart';
+import 'package:video_player_test/bp_widget.dart';
 import 'chewie_list_item.dart';
 
 void main() => runApp(MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -25,9 +26,9 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => VlcVideo()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => BpPlayer()));
         },
-        child: Text('VLC'),
+        child: Text('BP'),
       ),
       body: ListView(
         children: <Widget>[
@@ -37,16 +38,16 @@ class MyHomePage extends StatelessWidget {
             ),
             looping: true,
           ),
-          ChewieListItem(
-            videoPlayerController: VideoPlayerController.network(
-              'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-            ),
-          ),
           // ChewieListItem(
           //   videoPlayerController: VideoPlayerController.network(
-          //     'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
+          //     'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
           //   ),
           // ),
+          ChewieListItem(
+            videoPlayerController: VideoPlayerController.network(
+              'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
+            ),
+          ),
           // ChewieListItem(
           //   videoPlayerController: VideoPlayerController.network(
           //     'https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4',
@@ -62,11 +63,11 @@ class MyHomePage extends StatelessWidget {
           //     'https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_h264.mov',
           //   ),
           // ),
-          ChewieListItem(
-            videoPlayerController: VideoPlayerController.network(
-              'https://file-examples.com/wp-content/uploads/2018/04/file_example_WMV_1920_9_3MB.wmv',
-            ),
-          ),
+          // ChewieListItem(
+          //   videoPlayerController: VideoPlayerController.network(
+          //     'https://file-examples.com/wp-content/uploads/2018/04/file_example_WMV_1920_9_3MB.wmv',
+          //   ),
+          // ),
         ],
       ),
     );
