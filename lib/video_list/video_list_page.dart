@@ -11,7 +11,6 @@ class VideoListPage extends StatefulWidget {
 }
 
 class _VideoListPageState extends State<VideoListPage> {
-  final _random = new Random();
   final List<String> _videos = [
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
@@ -28,7 +27,7 @@ class _VideoListPageState extends State<VideoListPage> {
 
   void _setupData() {
     for (int index = 0; index < 3; index++) {
-      var randomVideoUrl = _videos[_random.nextInt(_videos.length)];
+      var randomVideoUrl = _videos[Random().nextInt(_videos.length)];
       dataList.add(VideoListData("Video $index", randomVideoUrl));
     }
   }
