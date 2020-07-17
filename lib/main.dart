@@ -66,6 +66,7 @@ class MyHomePage extends StatelessWidget {
             videoPlayerController: VideoPlayerController.network(
               'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
             ),
+            isLive: true,
           ),
           // ChewieListItem(
           //   videoPlayerController: VideoPlayerController.network(
