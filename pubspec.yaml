@@ -30,7 +30,7 @@ dependencies:
   video_player: ^0.10.11+2
   flutter_vlc_player: ^3.0.3
   chewie: ^0.9.10
-  path_provider: ^1.6.5
+  path_provider: ^1.6.11
   better_player: ^0.0.10
 
 dev_dependencies:

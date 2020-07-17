@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:video_player_test/bp_widget.dart';
+import 'package:video_player_test/vlc_widget.dart';
 import 'chewie_list_item.dart';
 
 void main() => runApp(MyApp());
@@ -24,11 +25,29 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Video Player'),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => BpPlayer()));
-        },
-        child: Text('BP'),
+      bottomNavigationBar: Row(
+        children: <Widget>[
+          Expanded(
+            child: RaisedButton(
+              child: Text(
+                'VLC',
+                style: TextStyle(color: Colors.black),
+              ),
+              color: Colors.yellowAccent,
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => VlcVideo()));
+              },
+            ),
+          ),
+          Expanded(
+            child: RaisedButton(
+              child: Text('BP'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => BpPlayer()));
+              },
+            ),
+          ),
+        ],
       ),
       body: ListView(
         children: <Widget>[
