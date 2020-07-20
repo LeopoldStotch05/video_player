@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
+// import 'package:video_player/video_player.dart';
 import 'package:video_player_test/bp_widget.dart';
 import 'package:video_player_test/vlc_widget.dart';
 import 'chewie_list_item.dart';
@@ -51,23 +51,23 @@ class MyHomePage extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          ChewieListItem(
-            videoPlayerController: VideoPlayerController.asset(
-              'assets/videos/IntroVideo.mp4',
-            ),
-            looping: true,
-          ),
+          // ChewieListItem(
+          //   videoPlayerController: VideoPlayerController.asset(
+          //     'assets/videos/IntroVideo.mp4',
+          //   ),
+          //   looping: true,
+          // ),
           // ChewieListItem(
           //   videoPlayerController: VideoPlayerController.network(
           //     'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
           //   ),
           // ),
-          ChewieListItem(
-            videoPlayerController: VideoPlayerController.network(
-              'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
-            ),
-            isLive: true,
-          ),
+          // ChewieListItem(
+          //   videoPlayerController: VideoPlayerController.network(
+          //     'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
+          //   ),
+          //   isLive: true,
+          // ),
           // ChewieListItem(
           //   videoPlayerController: VideoPlayerController.network(
           //     'https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4',

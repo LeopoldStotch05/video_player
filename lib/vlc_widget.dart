@@ -28,7 +28,7 @@ class _VlcVideoState extends State<VlcVideo> {
             width: playerWidth,
             child: VlcPlayer(
               aspectRatio: 16 / 9,
-              url: 'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
+              url: 'https://file-examples-com.github.io/uploads/2018/04/file_example_MOV_1920_2_2MB.mov',
               controller: controller,
               placeholder: Center(child: CircularProgressIndicator()),
             )));
